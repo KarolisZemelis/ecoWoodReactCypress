@@ -1,0 +1,52 @@
+/* DynamicForm.css */
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 4px;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select {
+  width: 300px; /* You can adjust this */
+  max-width: 100%; /* Prevent overflow on very small screens */
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-field p {
+  margin-top: 4px;
+  color: red;
+  font-size: 12px;
+}
+
+.submit-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #0078d4; /* MS blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #005a9e;
+}
