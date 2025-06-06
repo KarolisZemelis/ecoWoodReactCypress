@@ -11,7 +11,6 @@ export default function DynamicForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const updateState = (value) => {
-    const fieldSchema = formSchema.find((f) => f.name === value.name);
     const newErrors = { ...errors };
 
     if (value.name === "firstName") {
@@ -52,6 +51,13 @@ export default function DynamicForm() {
       // Field-specific validation (firstName cannot have numbers)
       if (field.name === "firstName" && /\d/.test(fieldValue)) {
         newErrors.firstName = "Galima įvesti tik raides";
+      }
+
+      if (field.name === "email") {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(fieldValue)) {
+          newErrors.email = "Įveskite teisingą el. pašto adresą";
+        }
       }
     });
 
